@@ -19,7 +19,7 @@ echo "export APP_DEBUG=$APP_DEBUG" >> /etc/apache2/envvars
 cp /.artifakt/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
 rm -rf /var/www/html/var/ && \
-    mkdir -p /data/var/log /data/var/uploads && \
+    mkdir -p /data/var/log /data/var/uploads /data/var/cache && \
     ln -s /data/var /var/www/html/var
 
 composer require symfony/apache-pack
